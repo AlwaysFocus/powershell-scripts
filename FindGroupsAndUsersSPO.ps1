@@ -103,7 +103,7 @@ elseif ('u' -eq $SearchType) {
 
             # Add all data to object array
             $ADGroup = New-Object psobject
-            $ADGroup | add-member -type noteproperty -name "Site Collection" -value $Site.RootWeb.Title
+            # $ADGroup | add-member -type noteproperty -name "Site Collection" -value $Site.RootWeb.Title
             $ADGroup | add-member -type noteproperty -name "URL" -value $Site.Url
             $ADGroup | add-member -type noteproperty -name "Group Name" -value $Group.DisplayName
             $ADGroup | add-member -type noteproperty -name "Direct Permissions" -value ($Permissions -join ",")
